@@ -1,0 +1,1 @@
+The usize type is enforced on array indices for portability purposes. Different computer architectures have different number of addresses of memory it can handle. Usize adapts its size to the architecture under which it is running on by making sure that, in the extreme case where we have as many items as there are addresses, we can access all items in the array.
