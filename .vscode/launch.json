@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/zibhelina/Documents/vault/knowledge_base/level_1/codeforces/P_281A",
-      "program": "/Users/zibhelina/Documents/vault/knowledge_base/level_1/codeforces/P_281A/build/Debug/outDebug"
+      "cwd": "/Users/zibhelina/Documents/vault/knowledge_base/level_1/codeforces/level_800/P_281A",
+      "program": "/Users/zibhelina/Documents/vault/knowledge_base/level_1/codeforces/level_800/P_281A/build/Debug/outDebug"
     }
   ]
 }
