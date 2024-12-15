@@ -1,0 +1,155 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{amsfonts, amssymb, amsmath}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage[margin=1in, paperheight=20cm]{geometry}
+\usepackage{tikz,pgfplots}
+\usepackage{graphicx}
+\usepackage{fontspec}
+\usepackage{titlesec}
+\usepackage[outputdir=./aux]{minted}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fontawesome5}
+
+\definecolor{myblack}{HTML}{000000}
+\definecolor{gray_1}{HTML}{F0F6FC}
+\definecolor{gray_2}{HTML}{C8D1D9}
+\definecolor{gray_3}{HTML}{B1BAC4}
+\definecolor{gray_4}{HTML}{8B949E}
+\definecolor{gray_5}{HTML}{6D7681}
+\definecolor{gray_6}{HTML}{484F58}
+\definecolor{gray_7}{HTML}{30363D}
+\definecolor{gray_8}{HTML}{21262D}
+\definecolor{gray_9}{HTML}{161B22}
+\definecolor{gray_10}{HTML}{0D1116}
+
+\definecolor{blue_1}{HTML}{CAE8FF}
+\definecolor{blue_2}{HTML}{A5D6FF}
+\definecolor{blue_3}{HTML}{79C0FF}
+\definecolor{blue_4}{HTML}{58A6FF}
+\definecolor{blue_5}{HTML}{398AFD}
+\definecolor{blue_6}{HTML}{1F6FEB}
+\definecolor{blue_7}{HTML}{1359C7}
+\definecolor{blue_8}{HTML}{0E419D}
+\definecolor{blue_9}{HTML}{0C2D6B}
+\definecolor{blue_10}{HTML}{051D4D}
+
+\definecolor{green_1}{HTML}{AFF4B5}
+\definecolor{green_2}{HTML}{7EE787}
+\definecolor{green_3}{HTML}{56D264}
+\definecolor{green_4}{HTML}{3FBA50}
+\definecolor{green_5}{HTML}{2DA042}
+\definecolor{green_6}{HTML}{248536}
+\definecolor{green_7}{HTML}{196C2E}
+\definecolor{green_8}{HTML}{0E5422}
+\definecolor{green_9}{HTML}{023A16}
+\definecolor{green_10}{HTML}{04260F}
+
+\definecolor{yellow_1}{HTML}{F7E3A1}
+\definecolor{yellow_2}{HTML}{F2CB60}
+\definecolor{yellow_3}{HTML}{E2B340}
+\definecolor{yellow_4}{HTML}{D29822}
+\definecolor{yellow_5}{HTML}{BB8107}
+\definecolor{yellow_6}{HTML}{9E6A02}
+\definecolor{yellow_7}{HTML}{845305}
+\definecolor{yellow_8}{HTML}{693E01}
+\definecolor{yellow_9}{HTML}{4A2B00}
+\definecolor{yellow_10}{HTML}{341A00}
+
+\definecolor{orange_1}{HTML}{FFDEB6}
+\definecolor{orange_2}{HTML}{FFC580}
+\definecolor{orange_3}{HTML}{FFA656}
+\definecolor{orange_4}{HTML}{F0873E}
+\definecolor{orange_5}{HTML}{DB6C28}
+\definecolor{orange_6}{HTML}{BD571C}
+\definecolor{orange_7}{HTML}{9B4214}
+\definecolor{orange_8}{HTML}{762E09}
+\definecolor{orange_9}{HTML}{5A1E02}
+\definecolor{orange_10}{HTML}{3D1500}
+
+\definecolor{red_1}{HTML}{FFDCD7}
+\definecolor{red_2}{HTML}{FFC0BA}
+\definecolor{red_3}{HTML}{FFA198}
+\definecolor{red_4}{HTML}{FF7B72}
+\definecolor{red_5}{HTML}{F85249}
+\definecolor{red_6}{HTML}{DA3633}
+\definecolor{red_7}{HTML}{B62524}
+\definecolor{red_8}{HTML}{8E1518}
+\definecolor{red_9}{HTML}{67050B}
+\definecolor{red_10}{HTML}{490202}
+
+\definecolor{purple_1}{HTML}{EDDDFE}
+\definecolor{purple_2}{HTML}{E2C4FF}
+\definecolor{purple_3}{HTML}{D3A9FF}
+\definecolor{purple_4}{HTML}{BE8CFF}
+\definecolor{purple_5}{HTML}{A371F7}
+\definecolor{purple_6}{HTML}{8956E5}
+\definecolor{purple_7}{HTML}{7040C9}
+\definecolor{purple_8}{HTML}{553097}
+\definecolor{purple_9}{HTML}{3C1D70}
+\definecolor{purple_10}{HTML}{270F52}
+
+\definecolor{pink_1}{HTML}{FFD9EC}
+\definecolor{pink_2}{HTML}{FFBEDD}
+\definecolor{pink_3}{HTML}{FF9BCE}
+\definecolor{pink_4}{HTML}{F778BB}
+\definecolor{pink_5}{HTML}{DB61A2}
+\definecolor{pink_6}{HTML}{BF4B8A}
+\definecolor{pink_7}{HTML}{9E3670}
+\definecolor{pink_8}{HTML}{7D2457}
+\definecolor{pink_9}{HTML}{5E103E}
+\definecolor{pink_10}{HTML}{42062A}
+
+\definecolor{coral_1}{HTML}{FFDDD2}
+\definecolor{coral_2}{HTML}{FFC2B2}
+\definecolor{coral_3}{HTML}{FFA28B}
+\definecolor{coral_4}{HTML}{F78166}
+\definecolor{coral_5}{HTML}{E96045}
+\definecolor{coral_6}{HTML}{D0462D}
+\definecolor{coral_7}{HTML}{AC331F}
+\definecolor{coral_8}{HTML}{872212}
+\definecolor{coral_9}{HTML}{640D04}
+\definecolor{coral_10}{HTML}{460701}
+
+\usemintedstyle{github-dark}
+\setminted{fontsize=\small}
+\surroundwithmdframed[
+    linecolor=gray_6,
+    linewidth=0.5pt,
+    backgroundcolor=gray_10,
+    roundcorner=5pt,
+    innerleftmargin=0pt,
+    innerrightmargin=0pt,
+    innertopmargin=15pt,
+    innerbottommargin=15pt,
+]{minted}
+
+\pagestyle{empty} % turn off page numbering %
+\parindent 0px % removes paragraph indenting %
+
+% Set colors for the entire document %
+\pagecolor{gray_10}
+\color{white}
+
+\begin{document}
+    \section*{Solving Problem 1A}
+    \begin{itemize}
+        \item The goal is to find the minimum amount of $a \times a$ tiles needed to cover a rectangular area of $n \times m$.
+        \item I also think about having a convenient notation for referring to these squares and rectangles. How about having a capital letter denoting the name for the region, followed by its dimension inside parenthesis? $S(a \times a)$. Then if I want to refer to any specific cell, I can say R(n \times m)[i][j], where i and j refer to row and column respectivelly. If I want to refer to a subregion of $R$, I can say $R(n \times m)[i..r][j..c]$.
+        \item Let $A(n\times m)$ be the rectangular region to be covered, let $B(a\times a)$ be the tile covering $A$.
+        \item The first thing that goes through my head is trying to fit the largest square made up of $a \times a$ squares that can fit inside the rectangular $n \times m$ area.
+        \item Even better than finding the greatest $C(k\times k)$ that fits in $A$ is finding the greatest rectangle $C(r\times c)$, perfectly coverable by $S(a \times a)$, that fits inside $R$.
+        \item How can I find the largest rectangle $C(r \times c)$ that is coverable by $B(a \times a)$ in $A(n \times m)$ in terms of $a$, $n$, and $m$?
+        \item I can easily see there are four scenarios to consider when placing $B(k \times k)$ in $A(n \times m)$. 
+            \begin{itemize}
+            \item Case 1: $C(r \times j)$ fits perfectly within $A(n \times m)$: This case happens when $n = ka$ and $m = ka$. Solving for $k$ we have that $k=n/a$ and $k=m/a$ and $n=m$.
+            \item Case 2: $C(r \times j)$ fits perfectly column-wise but not row-wise:
+            \item Case 3: $C(r \times j)$ fits perfectly row-wise but now column-wise:
+            \item Case 4 $C(r \times j)$ does not fit perfectly within $A$:
+            \end{itemize}
+        
+    \end{itemize}
+\end{document}
